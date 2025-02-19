@@ -1,0 +1,26 @@
+* {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background: url(../assets/background/background.jpg) repeat center center
+    fixed;
+  background-repeat: repeat-y;
+  background-position: center center;
+  background-size: cover;
+  color: #fff;
+}
+
+.logo_adris {
+  max-height: 100px;
+}
+
+.carousel-inner {
+  border-radius: 5px;
+}
+
+.carousel-inner img {
+  height: 150px;
+  object-fit: cover;
+}
