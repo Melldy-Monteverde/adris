@@ -4,12 +4,10 @@
 }
 
 body {
-  background: url(../assets/background/background.jpg) repeat center center
-    fixed;
-  background-repeat: repeat-y;
-  background-position: center center;
+  background: url(../assets/background/background.jpg) repeat center center fixed;
   background-size: cover;
   color: #fff;
+  min-height: 100vh;
 }
 
 .logo_adris {
@@ -23,4 +21,29 @@ body {
 .carousel-inner img {
   height: 150px;
   object-fit: cover;
+}
+
+.menu-item {
+  text-align: justify;
+}
+
+footer {
+  width: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  position: sticky;
+  bottom: 0;
+  text-align: center;
+}
+
+.ti-widget {
+  width: 100%;
+}
+
+.social_media_container {
+  margin-top: 10px;
+}
+
+.social_media_ig {
+  width: 40px;
+  height: 40px;
 }
