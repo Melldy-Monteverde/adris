@@ -1,6 +1,7 @@
 * {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  overflow-y: auto;
 }
 
 body {
@@ -8,6 +9,11 @@ body {
   background-size: cover;
   color: #fff;
   min-height: 100vh;
+}
+
+body:hover {
+  transform: none !important;
+  box-shadow: none !important;
 }
 
 .logo_adris {
@@ -19,7 +25,7 @@ body {
 }
 
 .carousel-inner img {
-  height: 150px;
+  height: 200px;
   object-fit: cover;
 }
 
@@ -37,6 +43,7 @@ footer {
 
 .ti-widget {
   width: 100%;
+  max-height: auto;
 }
 
 .social_media_container {
