@@ -1,679 +1,470 @@
 <!DOCTYPE html>
 <html lang="PT">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- opengrpah-->
-    <meta property="og:title" content="Adris Restaurant - Drinks Menu" />
-    <meta
-      property="og:description"
-      content="Descubra a nossa seleção de bebidas premium. Desde cocktails artesanais a vinhos requintados. Venha e aproveite!"
-    />
-    <meta property="og:image"
-    content=https://adris-restaurant.netlify.app/assets/adris_logo_short_bg.png>
-    <meta property="og:url" content="https://adris-restaurant.netlify.app/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Adris Restaurant" />
 
-    <title>Adris - Restaurant</title>
-    <link rel="icon" href="./assets/adris_icon.jpg" type="image/x-icon" />
-    <!-- bs -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <!-- css -->
-    <link href="./style/style.css" rel="stylesheet" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- opengrpah-->
+  <meta property="og:title" content="Adris Restaurant - Drinks Menu" />
+  <meta property="og:description"
+    content="Descubra a nossa seleção de bebidas premium. Desde cocktails artesanais a vinhos requintados. Venha e aproveite!" />
+  <meta property="og:image" content=https://adris-restaurant.netlify.app/assets/adris_logo_short_bg.png>
+  <meta property="og:url" content="https://adris-restaurant.netlify.app/" />
+  <meta property="og:type" content="Drinks menu" />
+  <meta property="og:site_name" content="Adris Restaurant" />
 
-    <!-- fontawesome -->
-    <script
-      src="https://kit.fontawesome.com/d759deb17c.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
+  <title>Adris - Restaurant</title>
+  <link rel="icon" href="./assets/adris_icon.jpg" type="image/x-icon" />
+  <!-- bs -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <!-- css -->
+  <link href="./style/style.css" rel="stylesheet" />
 
-  <body>
-    <header class="m-3 text-center">
-      <img
-        class="img-fluid mx-auto logo_adris"
-        src="./assets/adris_logo_short_bg.png"
-        alt="adris logo"
-      />
-    </header>
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/d759deb17c.js" crossorigin="anonymous"></script>
 
-    <main class="accordion p-3" id="menuAccordion">
-      <!-- Água -->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button
-            class="accordion-button"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#agua"
-          >
-            <img
-              class="me-1"
-              src="./assets/icons/agua-mineral.png"
-              alt="garrafa de água"
-            />
+  <script defer src="./js/app.js"></script>
+</head>
 
-            Águas | Waters
-          </button>
-        </h2>
-        <div
-          id="agua"
-          class="accordion-collapse collapse show"
-          data-bs-parent="#menuAccordion"
-        >
-          <div class="accordion-body">
-            <ul class="menu-list">
-              <li class="menu-item">Água 0,5L Natural | Water – 2,90€</li>
-              <li class="menu-item">Água c/gás (0,33L) | Sparkling water – 2,70€</li>
-            </ul>
-          </div>
+<body>
+  <!-- Loader -->
+  <div id="loader">
+    <div class="glass">
+      <div class="liquid"></div>
+    </div>
+    <p class="loading-text">A preparar sua bebida…</p>
+  </div>
+
+  <!-- full content -->
+<div id="page-content" class="d-none">  
+  
+  <header class="m-3 text-center">
+    <img class="img-fluid mx-auto logo_adris" src="./assets/adris_logo_short_bg.png" alt="adris logo" />
+  </header>
+  
+  <main class="accordion p-3" id="menuAccordion">
+    <!-- Água -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#agua">
+          <img class="me-1" src="./assets/icons/agua-mineral.png" alt="garrafa de água" />
+          
+          Águas | Waters
+        </button>
+      </h2>
+      <div id="agua" class="accordion-collapse collapse show" data-bs-parent="#menuAccordion">
+        <div class="accordion-body">
+          <ul class="menu-list">
+            <li class="menu-item">Água 0,5L Natural | Water – 2,90€</li>
+            <li class="menu-item">Água c/gás (0,33L) | Sparkling water – 2,70€</li>
+          </ul>
         </div>
       </div>
-
-      <!-- Refrigerantes -->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button
-            class="accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#refrigerantes"
-          >
-            <img
-              class="me-1"
-              src="./assets/icons/refrigerante.png"
-              alt="copo de refrigerante"
-            />
-            Refrigerantes (0,45L) | Soft drinks - 3,90€
-          </button>
-        </h2>
-        <div
-          id="refrigerantes"
-          class="accordion-collapse collapse"
-          data-bs-parent="#menuAccordion"
-        >
-          <div class="accordion-body">
-            <ul class="menu-list">
-              <li class="menu-item">Pepsi</li>
-              <li class="menu-item">Pepsi Max</li>
-              <li class="menu-item">Ice Tea Limão</li>
-              <li class="menu-item">7-Up</li>
-              <li class="menu-item">Sumo Maçã | Apple juice</li>
-              <li class="menu-item">Sumo Laranja | Orange juice</li>
-              <li class="menu-item">Sumo Ananás Pineapple juice</li>
-              <li class="menu-item">Sumo Limão | Lemon juice</li>
-              <li class="menu-item">Ginger Ale 0,20L – 2,70€</li>
-              <li class="menu-item">Água Tónica 0,20L – 2,70€</li>
-              <li class="menu-item">
-                Sumo de laranja fresco ou limonada - 3,90€
-              </li>
-              <li class="menu-item">Fresh orange juice or lemonade - 3,90€</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Cervejas e Cidras -->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button
-            class="accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#cervejas"
-          >
-            <img class="me-1" src="./assets/icons/cerveza.png" alt="cervejas" />
-            Cervejas e Cidras | Beers & Ciders
-          </button>
-        </h2>
-        <div
-          id="cervejas"
-          class="accordion-collapse collapse"
-          data-bs-parent="#menuAccordion"
-        >
-          <div class="accordion-body">
-            <ul class="menu-list">
-              <li class="menu-item">Imperial – 2,70€</li>
-              <li class="menu-item">Caneca – 3,90€</li>
-              <li class="menu-item">Super Bock – 3,20€</li>
-              <li class="menu-item">Girafa – 7,30€</li>
-              <li class="menu-item">Cerveja sem Álcool – 3,20€</li>
-              <li class="menu-item">Cerveja Preta – 3,20€</li>
-              <li class="menu-item">Heineken – 3,70€</li>
-              <li class="menu-item">Corona – 5,00€</li>
-              <li class="menu-item">Somersby – 5,00€</li>
-              <li class="menu-item">Magners – 5,00€</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sangrias -->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button
-            class="accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#sangrias"
-          >
-            <img
-              class="me-1"
-              src="./assets/icons/sangria.png"
-              alt="jarro de sangria|"
-            />
-            Sangrias (1,4L / 0,5L)
-          </button>
-        </h2>
-        <div
-          id="sangrias"
-          class="accordion-collapse collapse"
-          data-bs-parent="#menuAccordion"
-        >
-          <div class="accordion-body">
-            <ul class="menu-list">
-              <li class="menu-item">
-                Vinho Tinto | Red wine – 19,40€ / 12,00€
-              </li>
-              <li class="menu-item">
-                Vinho Branco | White wine - 21,90€ / 12,00€
-              </li>
-              <li class="menu-item">
-                Vinho Rosé | Rosé wine – 22,90€ / 12,50€
-              </li>
-              <li class="menu-item">Espumante | Champagne – 24,90€ / 13,00€</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Vinho da casa por copo -->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button
-            class="accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#vinho_copo"
-          >
-            <img
-              class="me-1"
-              src="./assets/icons/copa-de-vino.png"
-              alt="copo de vinho"
-            />
-            Copo de vinho | House glass of wine
-          </button>
-        </h2>
-        <div
-          id="vinho_copo"
-          class="accordion-collapse collapse"
-          data-bs-parent="#menuAccordion"
-        >
-          <div class="accordion-body">
-            <ul class="menu-list">
-              <li class="menu-item">Tinto / Branco | Red / White – 4,90€</li>
-              <li class="menu-item">Rosé / Verde | Rosé / Green - 4,90€</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Whiskys -->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button
-            class="accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#whiskys"
-          >
-            <img
-              class="me-1"
-              src="./assets/icons/whisky.png"
-              alt="copo de Whiskey"
-            />
-            Whiskys
-          </button>
-        </h2>
-        <div
-          id="whiskys"
-          class="accordion-collapse collapse"
-          data-bs-parent="#menuAccordion"
-        >
-          <div class="accordion-body">
-            <ul class="menu-list">
-              <li class="menu-item">Whisky Novo – 6,00€</li>
-              <li class="menu-item">Whisky 12 Anos – 7,50€</li>
-              <li class="menu-item">Whisky 15 Anos – 10,00€</li>
-              <li class="menu-item">Whisky Borbon – 8,50€</li>
-              <li class="menu-item">Irish Whisky – 6,50€</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Espirituosas -->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button
-            class="accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#espirituosas"
-          >
-            <img
-              class="me-1"
-              src="./assets/icons/vodka.png"
-              alt="bebidas espirituosas"
-            />
-            Bebidas Espirituosas - 8,00€
-          </button>
-        </h2>
-        <div
-          id="espirituosas"
-          class="accordion-collapse collapse"
-          data-bs-parent="#menuAccordion"
-        >
-          <div class="accordion-body">
-            <ul class="menu-list">
-              <li class="menu-item">Malibu</li>
-              <li class="menu-item">Smirnoff</li>
-              <li class="menu-item">Grey Goose - 12,00€</li>
-              <li class="menu-item">Bacardi</li>
-              <li class="menu-item">Havana Club</li>
-              <li class="menu-item">Capitan Morgan (Spacied ou Dark)</li>
-              <li class="menu-item">Legendario - 10,00€</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Cocktails -->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button
-            class="accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#cocktails"
-          >
-            <img class="me-1" src="./assets/icons/coctel.png" alt="cocktails" />
-            Cocktails – 10,00€
-          </button>
-        </h2>
-        <div
-          id="cocktails"
-          class="accordion-collapse collapse"
-          data-bs-parent="#menuAccordion"
-        >
-          <div class="accordion-body">
-            <ul class="menu-list">
-              <li class="menu-item">Mojito</li>
-              <li class="menu-item">Piña Colada</li>
-              <li class="menu-item">Daiquiri Morango</li>
-              <li class="menu-item">Expresso Martini</li>
-              <li class="menu-item">Porn Star Martini</li>
-              <li class="menu-item">Margarita</li>
-              <li class="menu-item">Whiskey Sour</li>
-              <li class="menu-item">Sex on the Beach</li>
-              <li class="menu-item">Cosmopolitan</li>
-              <li class="menu-item">Aperol Spritz</li>
-              <li class="menu-item">Caipirinha – 6,00€</li>
-              <li class="menu-item">Long Island Ice Tea – 12,00€</li>
-              <li class="menu-item">Shots – 5,00€</li>
-              <li class="menu-item">Mocktails – 7,50€</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Gin Tónic -->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button
-            class="accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#gin"
-          >
-            <img
-              class="me-1"
-              src="./assets/icons/gin-tonic.png"
-              alt="gin-tonic"
-            />
-            Gin Tónic – 12,00€
-          </button>
-        </h2>
-        <div
-          id="gin"
-          class="accordion-collapse collapse"
-          data-bs-parent="#menuAccordion"
-        >
-          <div class="accordion-body">
-            <ul class="menu-list">
-              <li class="menu-item">Bombay Sapphire ou Pressé (Limão)</li>
-              <li class="menu-item">Hendricks</li>
-              <li class="menu-item">Tanqueray Sevilla (Laranja)</li>
-              <li class="menu-item">Bulldog</li>
-              <li class="menu-item">Fox Tale Dry, Pink ou Melão</li>
-              <li class="menu-item">Beefeater ou Tanqueray Dry – 10,00€</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Aguardentes e Brandys -->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button
-            class="accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#aguardentes"
-          >
-            <img
-              class="me-1"
-              src="./assets/icons/cognac.png"
-              alt="aguardentes"
-            />
-            Aguardentes, Brandy e Cognac
-          </button>
-        </h2>
-        <div
-          id="aguardentes"
-          class="accordion-collapse collapse"
-          data-bs-parent="#menuAccordion"
-        >
-          <div class="accordion-body">
-            <ul class="menu-list">
-              <li class="menu-item">
-                Aguardente Velha – 6,00€ (CR&F, Fim de Século, Aldeia Velha)
-              </li>
-              <li class="menu-item">Macieira – 4,00€</li>
-              <li class="menu-item">Hennessy – 10,00€</li>
-              <li class="menu-item">Cognac – 7,50€</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Aperitivos -->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button
-            class="accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#aperitivos"
-          >
-            <img
-              class="me-1"
-              src="./assets/icons/martini.png"
-              alt="aperitivos"
-            />
-            Aperitivos | Appetizers
-          </button>
-        </h2>
-        <div
-          id="aperitivos"
-          class="accordion-collapse collapse"
-          data-bs-parent="#menuAccordion"
-        >
-          <div class="accordion-body">
-            <ul class="menu-list">
-              <li class="menu-item">Martini – 4,00€</li>
-              <li class="menu-item">Campari – 4,00€</li>
-              <li class="menu-item">Vinho do Porto | Porto wine – 4,00€</li>
-              <li class="menu-item">
-                Vinho do porto vintage | Vintage porto wine – 6,00€
-              </li>
-              <li class="menu-item">Pro Seco – 6,00€</li>
-              <li class="menu-item">Outros | Others</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Licores -->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button
-            class="accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#licores"
-          >
-            <img
-              class="me-1"
-              src="./assets/icons/licores.png"
-              alt="aperitivos"
-            />
-            Licores | Liquors
-          </button>
-        </h2>
-        <div
-          id="licores"
-          class="accordion-collapse collapse"
-          data-bs-parent="#menuAccordion"
-        >
-          <div class="accordion-body">
-            <h6>Licores Nacionais - 4,00€</h6>
-            <ul class="menu-list">
-              <li class="menu-item">Beirão</li>
-              <li class="menu-item">Licor de Ginja</li>
-              <li class="menu-item">Licor de Amêndua</li>
-            </ul>
-
-            <h6>Licores Importados - 6,50€</h6>
-            <ul class="menu-list">
-              <li class="menu-item">Amaretto</li>
-              <li class="menu-item">Baileys</li>
-              <li class="menu-item">Sambuca</li>
-              <li class="menu-item">Contreau</li>
-              <li class="menu-item">Grand Marnier</li>
-              <li class="menu-item">Tia Maria</li>
-              <li class="menu-item">Drambuie</li>
-              <li class="menu-item">Frangelico</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Cafes e chás -->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button
-            class="accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#cafe"
-          >
-            <img
-              class="me-1"
-              src="./assets/icons/taza-de-cafe.png"
-              alt="chavena de cafe"
-            />
-            Café e Chá | Cooffe & Tea
-          </button>
-        </h2>
-        <div
-          id="cafe"
-          class="accordion-collapse collapse"
-          data-bs-parent="#menuAccordion"
-        >
-          <div class="accordion-body">
-            <ul class="menu-list">
-              <li class="menu-item">Café | Expresso - 1,60€</li>
-              <li class="menu-item">Café com leite | White Coffee - 2,60€</li>
-              <li class="menu-item">Café Americano - 2,60€</li>
-              <li class="menu-item">Descafeinado | Decaf coffee - 1,60€</li>
-              <li class="menu-item">Galão | Latte - 3,00€</li>
-              <li class="menu-item">Cappuccino - 3,10€</li>
-              <li class="menu-item">Irish coffe - 7,00€</li>
-              <li class="menu-item">Tia Maria coffee - 7,00€</li>
-              <li class="menu-item">Amaretto coffe - 7,00€</li>
-              <li class="menu-item">Baileys coffe - 7,00€</li>
-              <li class="menu-item">Chá | Tea - 1,80€</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </main>
-
-    <div
-      id="carouselExampleAutoplaying"
-      class="carousel slide mx-3 my-3"
-      data-bs-ride="carousel"
-    >
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img
-            src="./assets/images/foto1.jpeg"
-            class="d-block w-100"
-            alt="foto"
-          />
-        </div>
-        <div class="carousel-item">
-          <img
-            src="./assets/images/foto2.jpeg"
-            class="d-block w-100"
-            alt="foto"
-          />
-        </div>
-        <div class="carousel-item">
-          <img
-            src="./assets/images/foto3.jpeg"
-            class="d-block w-100"
-            alt="foto"
-          />
-        </div>
-      </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleAutoplaying"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleAutoplaying"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
 
-    <section
-      class="text-center iva-section bg-dark bg-gradient bg-opacity-50 mx-3 mb-3 fw-light rounded"
-    >
-      IVA INCLUÍDO À TAXA EM VIGOR - VAT INCLUDED
+    <!-- Refrigerantes -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#refrigerantes">
+          <img class="me-1" src="./assets/icons/refrigerante.png" alt="copo de refrigerante" />
+          Refrigerantes (0,45L) | Soft drinks - 3,90€
+        </button>
+      </h2>
+      <div id="refrigerantes" class="accordion-collapse collapse" data-bs-parent="#menuAccordion">
+        <div class="accordion-body">
+          <ul class="menu-list">
+            <li class="menu-item">Pepsi</li>
+            <li class="menu-item">Pepsi Max</li>
+            <li class="menu-item">Ice Tea Limão</li>
+            <li class="menu-item">7-Up</li>
+            <li class="menu-item">Sumo Maçã | Apple juice</li>
+            <li class="menu-item">Sumo Laranja | Orange juice</li>
+            <li class="menu-item">Sumo Ananás Pineapple juice</li>
+            <li class="menu-item">Sumo Limão | Lemon juice</li>
+            <li class="menu-item">Ginger Ale 0,20L – 2,70€</li>
+            <li class="menu-item">Água Tónica 0,20L – 2,70€</li>
+            <li class="menu-item">
+              Sumo de laranja fresco ou limonada - 3,90€
+            </li>
+            <li class="menu-item">Fresh orange juice or lemonade - 3,90€</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cervejas e Cidras -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cervejas">
+          <img class="me-1" src="./assets/icons/cerveza.png" alt="cervejas" />
+          Cervejas e Cidras | Beers & Ciders
+        </button>
+      </h2>
+      <div id="cervejas" class="accordion-collapse collapse" data-bs-parent="#menuAccordion">
+        <div class="accordion-body">
+          <ul class="menu-list">
+            <li class="menu-item">Imperial – 2,70€</li>
+            <li class="menu-item">Caneca – 3,90€</li>
+            <li class="menu-item">Super Bock – 3,20€</li>
+            <li class="menu-item">Girafa – 7,30€</li>
+            <li class="menu-item">Cerveja sem Álcool – 3,20€</li>
+            <li class="menu-item">Cerveja Preta – 3,20€</li>
+            <li class="menu-item">Heineken – 3,70€</li>
+            <li class="menu-item">Corona – 5,00€</li>
+            <li class="menu-item">Somersby – 5,00€</li>
+            <li class="menu-item">Magners – 5,00€</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sangrias -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sangrias">
+          <img class="me-1" src="./assets/icons/sangria.png" alt="jarro de sangria|" />
+          Sangrias (1,4L / 0,5L)
+        </button>
+      </h2>
+      <div id="sangrias" class="accordion-collapse collapse" data-bs-parent="#menuAccordion">
+        <div class="accordion-body">
+          <ul class="menu-list">
+            <li class="menu-item">
+              Vinho Tinto | Red wine – 19,40€ / 12,00€
+            </li>
+            <li class="menu-item">
+              Vinho Branco | White wine - 21,90€ / 12,00€
+            </li>
+            <li class="menu-item">
+              Vinho Rosé | Rosé wine – 22,90€ / 12,50€
+            </li>
+            <li class="menu-item">Espumante | Champagne – 24,90€ / 13,00€</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vinho da casa por copo -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#vinho_copo">
+          <img class="me-1" src="./assets/icons/copa-de-vino.png" alt="copo de vinho" />
+          Copo de vinho | House glass of wine
+        </button>
+      </h2>
+      <div id="vinho_copo" class="accordion-collapse collapse" data-bs-parent="#menuAccordion">
+        <div class="accordion-body">
+          <ul class="menu-list">
+            <li class="menu-item">Tinto / Branco | Red / White – 4,90€</li>
+            <li class="menu-item">Rosé / Verde | Rosé / Green - 4,90€</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Whiskys -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#whiskys">
+          <img class="me-1" src="./assets/icons/whisky.png" alt="copo de Whiskey" />
+          Whiskys
+        </button>
+      </h2>
+      <div id="whiskys" class="accordion-collapse collapse" data-bs-parent="#menuAccordion">
+        <div class="accordion-body">
+          <ul class="menu-list">
+            <li class="menu-item">Whisky Novo – 6,00€</li>
+            <li class="menu-item">Whisky 12 Anos – 7,50€</li>
+            <li class="menu-item">Whisky 15 Anos – 10,00€</li>
+            <li class="menu-item">Whisky Borbon – 8,50€</li>
+            <li class="menu-item">Irish Whisky – 6,50€</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Espirituosas -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#espirituosas">
+          <img class="me-1" src="./assets/icons/vodka.png" alt="bebidas espirituosas" />
+          Bebidas Espirituosas - 8,00€
+        </button>
+      </h2>
+      <div id="espirituosas" class="accordion-collapse collapse" data-bs-parent="#menuAccordion">
+        <div class="accordion-body">
+          <ul class="menu-list">
+            <li class="menu-item">Malibu</li>
+            <li class="menu-item">Smirnoff</li>
+            <li class="menu-item">Grey Goose - 12,00€</li>
+            <li class="menu-item">Bacardi</li>
+            <li class="menu-item">Havana Club</li>
+            <li class="menu-item">Capitan Morgan (Spacied ou Dark)</li>
+            <li class="menu-item">Legendario - 10,00€</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cocktails -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cocktails">
+          <img class="me-1" src="./assets/icons/coctel.png" alt="cocktails" />
+          Cocktails – 10,00€
+        </button>
+      </h2>
+      <div id="cocktails" class="accordion-collapse collapse" data-bs-parent="#menuAccordion">
+        <div class="accordion-body">
+          <ul class="menu-list">
+            <li class="menu-item">Mojito</li>
+            <li class="menu-item">Piña Colada</li>
+            <li class="menu-item">Daiquiri Morango</li>
+            <li class="menu-item">Expresso Martini</li>
+            <li class="menu-item">Porn Star Martini</li>
+            <li class="menu-item">Margarita</li>
+            <li class="menu-item">Whiskey Sour</li>
+            <li class="menu-item">Sex on the Beach</li>
+            <li class="menu-item">Cosmopolitan</li>
+            <li class="menu-item">Aperol Spritz</li>
+            <li class="menu-item">Caipirinha – 6,00€</li>
+            <li class="menu-item">Long Island Ice Tea – 12,00€</li>
+            <li class="menu-item">Shots – 5,00€</li>
+            <li class="menu-item">Mocktails – 7,50€</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gin Tónic -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#gin">
+          <img class="me-1" src="./assets/icons/gin-tonic.png" alt="gin-tonic" />
+          Gin Tónic – 12,00€
+        </button>
+      </h2>
+      <div id="gin" class="accordion-collapse collapse" data-bs-parent="#menuAccordion">
+        <div class="accordion-body">
+          <ul class="menu-list">
+            <li class="menu-item">Bombay Sapphire ou Pressé (Limão)</li>
+            <li class="menu-item">Hendricks</li>
+            <li class="menu-item">Tanqueray Sevilla (Laranja)</li>
+            <li class="menu-item">Bulldog</li>
+            <li class="menu-item">Fox Tale Dry, Pink ou Melão</li>
+            <li class="menu-item">Beefeater ou Tanqueray Dry – 10,00€</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Aguardentes e Brandys -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#aguardentes">
+          <img class="me-1" src="./assets/icons/cognac.png" alt="aguardentes" />
+          Aguardentes, Brandy e Cognac
+        </button>
+      </h2>
+      <div id="aguardentes" class="accordion-collapse collapse" data-bs-parent="#menuAccordion">
+        <div class="accordion-body">
+          <ul class="menu-list">
+            <li class="menu-item">
+              Aguardente Velha – 6,00€ (CR&F, Fim de Século, Aldeia Velha)
+            </li>
+            <li class="menu-item">Macieira – 4,00€</li>
+            <li class="menu-item">Hennessy – 10,00€</li>
+            <li class="menu-item">Cognac – 7,50€</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Aperitivos -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#aperitivos">
+          <img class="me-1" src="./assets/icons/martini.png" alt="aperitivos" />
+          Aperitivos | Appetizers
+        </button>
+      </h2>
+      <div id="aperitivos" class="accordion-collapse collapse" data-bs-parent="#menuAccordion">
+        <div class="accordion-body">
+          <ul class="menu-list">
+            <li class="menu-item">Martini – 4,00€</li>
+            <li class="menu-item">Campari – 4,00€</li>
+            <li class="menu-item">Vinho do Porto | Porto wine – 4,00€</li>
+            <li class="menu-item">
+              Vinho do porto vintage | Vintage porto wine – 6,00€
+            </li>
+            <li class="menu-item">Pro Seco – 6,00€</li>
+            <li class="menu-item">Outros | Others</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Licores -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#licores">
+          <img class="me-1" src="./assets/icons/licores.png" alt="aperitivos" />
+          Licores | Liquors
+        </button>
+      </h2>
+      <div id="licores" class="accordion-collapse collapse" data-bs-parent="#menuAccordion">
+        <div class="accordion-body">
+          <h6>Licores Nacionais - 4,00€</h6>
+          <ul class="menu-list">
+            <li class="menu-item">Beirão</li>
+            <li class="menu-item">Licor de Ginja</li>
+            <li class="menu-item">Licor de Amêndua</li>
+          </ul>
+
+          <h6>Licores Importados - 6,50€</h6>
+          <ul class="menu-list">
+            <li class="menu-item">Amaretto</li>
+            <li class="menu-item">Baileys</li>
+            <li class="menu-item">Sambuca</li>
+            <li class="menu-item">Contreau</li>
+            <li class="menu-item">Grand Marnier</li>
+            <li class="menu-item">Tia Maria</li>
+            <li class="menu-item">Drambuie</li>
+            <li class="menu-item">Frangelico</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cafes e chás -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cafe">
+          <img class="me-1" src="./assets/icons/taza-de-cafe.png" alt="chavena de cafe" />
+          Café e Chá | Cooffe & Tea
+        </button>
+      </h2>
+      <div id="cafe" class="accordion-collapse collapse" data-bs-parent="#menuAccordion">
+        <div class="accordion-body">
+          <ul class="menu-list">
+            <li class="menu-item">Café | Expresso - 1,60€</li>
+            <li class="menu-item">Café com leite | White Coffee - 2,60€</li>
+            <li class="menu-item">Café Americano - 2,60€</li>
+            <li class="menu-item">Descafeinado | Decaf coffee - 1,60€</li>
+            <li class="menu-item">Galão | Latte - 3,00€</li>
+            <li class="menu-item">Cappuccino - 3,10€</li>
+            <li class="menu-item">Irish coffe - 7,00€</li>
+            <li class="menu-item">Tia Maria coffee - 7,00€</li>
+            <li class="menu-item">Amaretto coffe - 7,00€</li>
+            <li class="menu-item">Baileys coffe - 7,00€</li>
+            <li class="menu-item">Chá | Tea - 1,80€</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade mx-3 my-3" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./assets/images/foto1.jpeg" class="d-block w-100 img-fluid" alt="foto" />
+      </div>
+      <div class="carousel-item">
+        <img src="./assets/images/foto2.jpeg" class="d-block w-100 img-fluid" alt="foto" />
+      </div>
+      <div class="carousel-item">
+        <img src="./assets/images/foto3.jpeg" class="d-block w-100 img-fluid" alt="foto" />
+      </div>
+      <div class="carousel-item">
+        <img src="./assets/images/foto4.jpeg" class="d-block w-100 img-fluid" alt="foto" />
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <section class="text-center iva-section bg-dark bg-gradient bg-opacity-50 mx-3 mb-3 fw-light rounded">
+    IVA INCLUÍDO À TAXA EM VIGOR - VAT INCLUDED
+  </section>
+
+  <footer id="footer" class="footer d-flex flex-column justify-content-center align-items-center">
+    <!-- Caixa de comentarios -->
+    <section class="ti-widget py-3 px-2">
+      <div class="reviews-contentor">
+        <!-- test -->
+        <button type="button" class="btn bg-light btn-lg">
+          <a href="https://maps.app.goo.gl/uAKajBVzADmRbCNK6" target="_blank">
+            <img src="./assets/icons/google.svg" alt="logo google" class="img-btn" />
+            <div class="review-content">
+              <div class="review-score">4.5</div>
+              <span class="fa-solid fa-star stars"></span>
+              <span class="fa-solid fa-star stars"></span>
+              <span class="fa-solid fa-star stars"></span>
+              <span class="fa-solid fa-star stars"></span>
+              <span class="fa-solid fa-star-half-stroke stars"></span>
+              <div class="review-count">+900 reviews</div>
+            </div>
+          </a>
+        </button>
+
+        <button type="button" class="btn bg-light btn-lg">
+          <a href="https://www.thefork.pt/restaurante/adris-r605439" target="_blank">
+            <img src="./assets/icons/thefork.png" alt="thefork logo" class="img-btn" />
+            <div class="review-content">
+              <div class="review-score">9/10</div>
+              <span class="fa-solid fa-star stars"></span>
+              <span class="fa-solid fa-star stars"></span>
+              <span class="fa-solid fa-star stars"></span>
+              <span class="fa-solid fa-star stars"></span>
+              <span class="fa-solid fa-star-half-stroke stars"></span>
+              <div class="review-count">+300 reviews</div>
+            </div>
+          </a>
+        </button>
+
+        <button type="button" class="btn bg-light btn-lg">
+          <a href="https://www.tripadvisor.pt/Restaurant_Review-g652081-d8444925-Reviews-Adris-Praia_da_Rocha_Portimao_Faro_District_Algarve.html"
+            target="_blank">
+            <img src="./assets/icons/Tripadvisor_logoset_solid_green.svg" alt="tripadvisor logo" class="img-btn" />
+            <div class="review-content">
+              <div class="review-score">4.5</div>
+              <span class="fa-solid fa-star stars"></span>
+              <span class="fa-solid fa-star stars"></span>
+              <span class="fa-solid fa-star stars"></span>
+              <span class="fa-solid fa-star stars"></span>
+              <span class="fa-solid fa-star-half-stroke stars"></span>
+              <div class="review-count">+800 reviews</div>
+            </div>
+          </a>
+        </button>
     </section>
 
-    <footer
-      id="footer"
-      class="footer d-flex flex-column justify-content-center align-items-center"
-    >
-      <!-- Caixa de comentarios -->
-      <section class="ti-widget py-3">
-        <div class="reviews-contentor">
-          <!-- test -->
-          <button type="button" class="btn bg-light btn-lg">
-            <a href="https://maps.app.goo.gl/uAKajBVzADmRbCNK6" target="_blank">
-              <img
-                src="./assets/icons/google.svg"
-                alt="logo google"
-                class="img-btn"
-              />
-              <div class="review-content">
-                <div class="review-score">4.5</div>
-                <span class="fa-solid fa-star stars"></span>
-                <span class="fa-solid fa-star stars"></span>
-                <span class="fa-solid fa-star stars"></span>
-                <span class="fa-solid fa-star stars"></span>
-                <span class="fa-solid fa-star-half-stroke stars"></span>
-                <div class="review-count">+900 reviews</div>
-              </div>
-            </a>
-          </button>
+    <!-- Redes Sociales -->
+    <div class="social_media_container my-3">
+      <a href="https://www.instagram.com/adris.restaurant?igsh=ZncyOHd6bG83bzA1" class="social_media_link" target="_blank">
+        <img src="./assets/icons/instagram_1.svg" alt="Instagram logo" class="social_media_ig" />
+      </a>
+    </div>
+    </div>
+  </footer>
 
-          <button type="button" class="btn bg-light btn-lg">
-            <a
-              href="https://www.thefork.pt/restaurante/adris-r605439"
-              target="_blank"
-            >
-              <img
-                src="./assets/icons/thefork.png"
-                alt="thefork logo"
-                class="img-btn"
-              />
-              <div class="review-content">
-                <div class="review-score">9/10</div>
-                <span class="fa-solid fa-star stars"></span>
-                <span class="fa-solid fa-star stars"></span>
-                <span class="fa-solid fa-star stars"></span>
-                <span class="fa-solid fa-star stars"></span>
-                <span class="fa-solid fa-star-half-stroke stars"></span>
-                <div class="review-count">+300 reviews</div>
-              </div>
-            </a>
-          </button>
+</div>
 
-          <button type="button" class="btn bg-light btn-lg">
-            <a
-              href="https://www.tripadvisor.pt/Restaurant_Review-g652081-d8444925-Reviews-Adris-Praia_da_Rocha_Portimao_Faro_District_Algarve.html"
-              target="_blank"
-            >
-              <img
-                src="./assets/icons/Tripadvisor_logoset_solid_green.svg"
-                alt="tripadvisor logo"
-                class="img-btn"
-              />
-              <div class="review-content">
-                <div class="review-score">4.5</div>
-                <span class="fa-solid fa-star stars"></span>
-                <span class="fa-solid fa-star stars"></span>
-                <span class="fa-solid fa-star stars"></span>
-                <span class="fa-solid fa-star stars"></span>
-                <span class="fa-solid fa-star-half-stroke stars"></span>
-                <div class="review-count">+800 reviews</div>
-              </div>
-            </a>
-          </button>
-        </section>
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
 
-          <!-- Redes Sociales -->
-          <div class="social_media_container my-3">
-            <a
-              href="https://www.instagram.com/adris.restaurant"
-              class="social_media_link"
-              target="_blank"
-            >
-              <img
-                src="./assets/icons/instagram.png"
-                alt="Instagram logo"
-                class="social_media_ig"
-              />
-            </a>
-          </div>
-        </div>
-    </footer>
-
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-  </body>
 </html>
