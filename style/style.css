@@ -49,7 +49,6 @@ footer {
 .ti-widget,
 .elfsight-widget {
   width: 100%;
-  max-height: auto;
 }
 
 .social_media_container {
@@ -94,7 +93,8 @@ footer {
   margin-bottom: 14px;
 }
 
-.review-logo, .img-btn {
+.review-logo,
+.img-btn {
   width: 50px;
 }
 
@@ -109,7 +109,6 @@ footer {
 
 .pointer-container {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -119,15 +118,20 @@ footer {
   color: #5f6369;
   align-self: flex-start;
 }
+
 .stars {
   color: #ffd43b;
 }
+
 .review-count {
   font-size: 12px;
   color: #777;
 }
 
-/* ===== Loader ===== */
+/* =========================
+   LOADER
+========================= */
+
 #loader {
   position: fixed;
   inset: 0;
@@ -139,63 +143,69 @@ footer {
   z-index: 9999;
 }
 
+/* CONTENEDOR */
+.logo-loader {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* FONDO SUNSET CIRCULAR */
+.logo-loader::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 50% 70%,
+    #ffb347 0%,
+    #ffcc33 25%,
+    #ff7e5f 55%,
+    #0e0e0e 80%
+  );
+
+  transform: scale(0);
+  animation: fillSunset 2.5s ease forwards;
+  z-index: 1;
+}
+
+/* LOGO */
+.logo-loader::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../assets/adris_logo_bg.png") no-repeat center;
+  background-size: 90% auto;
+
+  opacity: 0;
+  transform: translateY(15px);
+  animation: revealLogo 3s ease forwards;
+  z-index: 2;
+}
+
+/* ANIMACIÓN FONDO */
+@keyframes fillSunset {
+  to {
+    transform: scale(1);
+  }
+}
+
+/* ANIMACIÓN LOGO */
+@keyframes revealLogo {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .loading-text {
   margin-top: 20px;
   color: #fff;
   font-weight: 300;
   letter-spacing: 1px;
-}
-
-/* Glass */
-.glass {
-  width: 120px;
-  height: 200px;
-  border: 4px solid #fff;
-  border-radius: 0 0 20px 20px;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Liquid */
-.liquid {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 0%;
-  background: linear-gradient(
-    135deg,
-    #f39c12,
-    #f1c40f
-  );
-  animation: fill 2.5s ease-in-out forwards;
-}
-
-.liquid::before {
-  content: "";
-  position: absolute;
-  top: -15px;
-  width: 200%;
-  height: 30px;
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  animation: wave 1.2s infinite linear;
-}
-
-/* Animations */
-@keyframes fill {
-  from {
-    height: 0%;
-  }
-  to {
-    height: 100%;
-  }
-}
-
-@keyframes wave {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
 }
