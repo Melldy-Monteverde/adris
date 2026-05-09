@@ -33,12 +33,12 @@ const renderMenu = (data) => {
               }
               ${
                 typeof item.precio_jarra === "number"
-                  ? `Jarra: ${item.precio_jarra.toFixed(2)}€`
+                  ? `${item.precio_jarra.toFixed(2)}€`
                   : ""
               }
               ${
                 typeof item.precio_media === "number"
-                  ? ` | Média: ${item.precio_media.toFixed(2)}€`
+                  ? ` / ${item.precio_media.toFixed(2)}€`
                   : ""
               }
             </span>
