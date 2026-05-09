@@ -98,40 +98,20 @@ const renderMenu = (data) => {
   });
 };
 
-fetch("./db/db.json")
-  .then((response) => {
+const loadMenu = async () => {
+  try {
+    const response = await fetch("../db/db.json");
+
     if (!response.ok) {
-      throw new Error("Error al cargar JSON");
+      throw new Error(`Error fetchig data: ${response.status}`);
     }
 
-    return response.json();
-  })
-  .then((data) => {
+    const data = await response.json();
+
     renderMenu(data);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
+  } catch (error) {
+    console.error("Menu load fiiled:", error);
+  }
+};
 
-{
-  /* 
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#agua">
-            <img class="me-1" src="./assets/icons/agua-mineral.png" alt="garrafa de água" />
-            Águas | Waters
-          </button>
-        </h2>
-        <div id="agua" class="accordion-collapse collapse show" data-bs-parent="#menuAccordion">
-          <div class="accordion-body">
-            <ul class="menu-list">
-              <li class="menu-item">Água 0,5L Natural | Water – 3,00€</li>
-              <li class="menu-item">Água c/gás (0,33L) | Sparkling water – 2,70€</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-
-*/
-}
+loadMenu();
