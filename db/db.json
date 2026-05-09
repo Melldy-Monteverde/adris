@@ -1,0 +1,453 @@
+[
+  {
+    "menu":{
+      "categorias":[
+        {
+          "nombre":"Águas | Waters",
+          "items":[
+            {
+              "nombre":"Água 0,5L Natural | Water",
+              "precio":3.0
+            },
+            {
+              "nombre":"Água c/gás (0,33L) | Sparkling water",
+              "precio":2.7
+            }
+          ],
+          "img": "../assets/icons/agua-mineral.png"
+        },
+        {
+          "nombre":"Refrigerantes (0,45L) | Soft drinks",
+          "precio_base":4.0,
+          "items":[
+            {
+              "nombre":"Pepsi",
+              "precio":4.0
+            },
+            {
+              "nombre":"Pepsi Max",
+              "precio":4.0
+            },
+            {
+              "nombre":"Ice Tea Limão",
+              "precio":4.0
+            },
+            {
+              "nombre":"7-Up",
+              "precio":4.0
+            },
+            {
+              "nombre":"Sumo Maçã | Apple juice",
+              "precio":4.0
+            },
+            {
+              "nombre":"Sumo Laranja | Orange juice",
+              "precio":4.0
+            },
+            {
+              "nombre":"Sumo Ananás | Pineapple juice",
+              "precio":4.0
+            },
+            {
+              "nombre":"Sumo Limão | Lemon juice",
+              "precio":4.0
+            },
+            {
+              "nombre":"Ginger Ale 0,20L",
+              "precio":2.7
+            },
+            {
+              "nombre":"Água Tónica 0,20L",
+              "precio":2.7
+            },
+            {
+              "nombre":"Sumo de laranja fresco ou limonada",
+              "precio":4.5
+            }
+          ],
+          "img": "../assets/icons/refrigerante.png"
+        },
+        {
+          "nombre":"Cervejas e Cidras | Beers & Ciders",
+          "items":[
+            {
+              "nombre":"Imperial",
+              "precio":2.8
+            },
+            {
+              "nombre":"Caneca",
+              "precio":4.5
+            },
+            {
+              "nombre":"Super Bock",
+              "precio":3.2
+            },
+            {
+              "nombre":"Girafa",
+              "precio":8.0
+            },
+            {
+              "nombre":"Cerveja sem Álcool",
+              "precio":3.2
+            },
+            {
+              "nombre":"Cerveja Preta",
+              "precio":3.2
+            },
+            {
+              "nombre":"Heineken",
+              "precio":3.9
+            },
+            {
+              "nombre":"Corona",
+              "precio":5.0
+            },
+            {
+              "nombre":"Somersby",
+              "precio":5.0
+            },
+            {
+              "nombre":"Magners",
+              "precio":5.0
+            }
+          ],
+          "img": "../assets/icons/cerveza.png"
+        },
+        {
+          "nombre":"Sangrias (1,4L / 0,5L)",
+          "items":[
+            {
+              "nombre":"Vinho Tinto | Red wine",
+              "precio_jarra":19.4,
+              "precio_media":12.0
+            },
+            {
+              "nombre":"Vinho Branco | White wine",
+              "precio_jarra":21.9,
+              "precio_media":12.0
+            },
+            {
+              "nombre":"Vinho Rosé | Rosé wine",
+              "precio_jarra":22.9,
+              "precio_media":12.5
+            },
+            {
+              "nombre":"Espumante | Champagne",
+              "precio_jarra":24.9,
+              "precio_media":13.0
+            }
+          ],
+          "img": "../assets/icons/sangria.png"
+        },
+        {
+          "nombre":"Copo de vinho | House glass of wine",
+          "items":[
+            {
+              "nombre":"Tinto / Branco | Red / White",
+              "precio":4.9
+            },
+            {
+              "nombre":"Rosé / Verde | Rosé / Green",
+              "precio":4.9
+            }
+          ],
+          "img": "../assets/icons/copa-de-vino.png"
+        },
+        {
+          "nombre":"Whiskys",
+          "items":[
+            {
+              "nombre":"Whisky Novo",
+              "precio":6.5
+            },
+            {
+              "nombre":"Whisky 12 Anos",
+              "precio":8.5
+            },
+            {
+              "nombre":"Whisky 15 Anos",
+              "precio":10.0
+            },
+            {
+              "nombre":"Whisky Borbon",
+              "precio":8.5
+            },
+            {
+              "nombre":"Irish Whisky",
+              "precio":7.0
+            }
+          ],
+          "img": "../assets/icons/whisky.png"
+        },
+        {
+          "nombre":"Bebidas Espirituosas",
+          "precio_base":8.5,
+          "items":[
+            {
+              "nombre":"Malibu",
+              "precio":8.5
+            },
+            {
+              "nombre":"Smirnoff",
+              "precio":8.5
+            },
+            {
+              "nombre":"Grey Goose",
+              "precio":12.0
+            },
+            {
+              "nombre":"Bacardi",
+              "precio":8.5
+            },
+            {
+              "nombre":"Havana Club",
+              "precio":8.5
+            },
+            {
+              "nombre":"Capitan Morgan (Spacied ou Dark)",
+              "precio":8.5
+            },
+            {
+              "nombre":"Legendario",
+              "precio":10.0
+            }
+          ],
+          "img": "../assets/icons/vodka.png"
+        },
+        {
+          "nombre":"Cocktails",
+          "precio_base":11.0,
+          "items":[
+            {
+              "nombre":"Mojito",
+              "precio":11.0
+            },
+            {
+              "nombre":"Piña Colada",
+              "precio":11.0
+            },
+            {
+              "nombre":"Daiquiri Morango",
+              "precio":11.0
+            },
+            {
+              "nombre":"Expresso Martini",
+              "precio":11.0
+            },
+            {
+              "nombre":"Porn Star Martini",
+              "precio":11.0
+            },
+            {
+              "nombre":"Margarita",
+              "precio":11.0
+            },
+            {
+              "nombre":"Whiskey Sour",
+              "precio":11.0
+            },
+            {
+              "nombre":"Sex on the Beach",
+              "precio":11.0
+            },
+            {
+              "nombre":"Cosmopolitan",
+              "precio":11.0
+            },
+            {
+              "nombre":"Aperol Spritz",
+              "precio":11.0
+            },
+            {
+              "nombre":"Caipirinha",
+              "precio":6.0
+            },
+            {
+              "nombre":"Long Island Ice Tea",
+              "precio":13.0
+            },
+            {
+              "nombre":"Shots",
+              "precio":5.0
+            },
+            {
+              "nombre":"Mocktails",
+              "precio":7.5
+            }
+          ],
+          "img": "../assets/icons/cocktail.png"
+        },
+        {
+          "nombre":"Gin Tónic",
+          "precio_base":12.0,
+          "items":[
+            {
+              "nombre":"Bombay Sapphire ou Pressé (Limão)",
+              "precio":12.0
+            },
+            {
+              "nombre":"Hendricks",
+              "precio":12.0
+            },
+            {
+              "nombre":"Tanqueray Sevilla (Laranja)",
+              "precio":12.0
+            },
+            {
+              "nombre":"Bulldog",
+              "precio":12.0
+            },
+            {
+              "nombre":"Fox Tale Dry, Pink ou Melão",
+              "precio":12.0
+            },
+            {
+              "nombre":"Beefeater ou Tanqueray Dry",
+              "precio":10.0
+            }
+          ],
+          "img": "../assets/icons/gin-tonic.png"
+        },
+        {
+          "nombre":"Aguardentes, Brandy e Cognac",
+          "items":[
+            {
+              "nombre":"Aguardente Velha (CR&F, Fim de Século, Aldeia Velha)",
+              "precio":6.5
+            },
+            {
+              "nombre":"Macieira",
+              "precio":4.5
+            },
+            {
+              "nombre":"Hennessy",
+              "precio":10.0
+            },
+            {
+              "nombre":"Cognac",
+              "precio":8.0
+            }
+          ],
+          "img": "../assets/icons/cognac.png"
+        },
+        {
+          "nombre":"Aperitivos | Appetizers",
+          "items":[
+            {
+              "nombre":"Martini",
+              "precio":4.0
+            },
+            {
+              "nombre":"Campari",
+              "precio":6.5
+            },
+            {
+              "nombre":"Pernod",
+              "precio":6.5
+            },
+            {
+              "nombre":"Ricard",
+              "precio":6.5
+            },
+            {
+              "nombre":"Vinho do Porto | Porto wine",
+              "precio":4.0
+            },
+            {
+              "nombre":"Vinho do porto vintage | Vintage porto wine",
+              "precio":6.5
+            },
+            {
+              "nombre":"Pro Seco",
+              "precio":6.0
+            },
+            {
+              "nombre":"Outros | Others",
+              "precio":null
+            }
+          ],
+          "img": "../assets/icons/martini.png"
+        },
+        {
+          "nombre":"Licores | Liquors",
+          "subcategorias":[
+            {
+              "nombre":"Licores Nacionais",
+              "precio":4.5,
+              "items":[
+                "Beirão",
+                "Licor de Ginja",
+                "Licor de Amêndua"
+              ]
+            },
+            {
+              "nombre":"Licores Importados",
+              "precio":6.5,
+              "items":[
+                "Amaretto",
+                "Baileys",
+                "Sambuca",
+                "Contreau",
+                "Grand Marnier",
+                "Tia Maria",
+                "Drambuie",
+                "Frangelico"
+              ]
+            }
+          ],
+          "img": "../assets/icons/licores.png"
+        },
+        {
+          "nombre":"Café e Chá | Coffee & Tea",
+          "items":[
+            {
+              "nombre":"Café | Expresso",
+              "precio":1.6
+            },
+            {
+              "nombre":"Café com leite | White Coffee",
+              "precio":2.6
+            },
+            {
+              "nombre":"Café Americano",
+              "precio":2.6
+            },
+            {
+              "nombre":"Descafeinado | Decaf coffee",
+              "precio":1.6
+            },
+            {
+              "nombre":"Galão | Latte",
+              "precio":3.0
+            },
+            {
+              "nombre":"Cappuccino",
+              "precio":3.1
+            },
+            {
+              "nombre":"Irish coffee",
+              "precio":7.0
+            },
+            {
+              "nombre":"Tia Maria coffee",
+              "precio":7.0
+            },
+            {
+              "nombre":"Amaretto coffee",
+              "precio":7.0
+            },
+            {
+              "nombre":"Baileys coffee",
+              "precio":7.0
+            },
+            {
+              "nombre":"Chá | Tea",
+              "precio":1.8
+            }
+          ],
+          "img": "../assets/icons/taza-de-cafe.png"
+        }
+      ]
+    }
+  }
+]
